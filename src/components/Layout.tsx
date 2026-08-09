@@ -71,10 +71,10 @@ export default function Layout() {
               <img src="/logo.png" alt="Logo" className={`w-14 h-14 md:w-24 md:h-24 object-contain scale-125 ${language === 'ar' ? '-ml-2 md:-ml-5 -mr-1 md:-mr-4' : 'mr-2 md:mr-2 -ml-1 md:-ml-4'}`} />
               <div className="flex flex-col justify-center items-start mt-1">
                 <span className="text-base md:text-xl font-black text-gray-900 whitespace-nowrap">
-                   {language === 'ar' ? <>مستشفى <span className="text-red-600">النذير</span></> : <><span className="text-red-600">Al-Nazir</span> Hospital</>}
+                   {language === 'ar' ? <>مستشفى <span className="text-red-600">النذير</span></> : <><span className="text-red-600">Al-Nazir</span> Specialized</>}
                 </span>
                 <span className="text-xs md:text-sm font-bold text-gray-500 tracking-wider">
-                  {language === 'ar' ? 'التخصصي' : 'Specialist'}
+                  {language === 'ar' ? 'التخصصي' : 'Hospital'}
                 </span>
               </div>
             </Link>
@@ -201,7 +201,7 @@ export default function Layout() {
               <div className="flex items-center mb-6">
                 <img src="/logo.png" alt="Logo" className={`w-16 h-16 md:w-20 md:h-20 object-contain scale-125 ${language === 'ar' ? 'ml-1 md:ml-2' : 'mr-1 md:mr-2'}`} />
                 <span className="text-lg md:text-xl font-black text-white">
-                  {language === 'ar' ? 'مستشفى النذير التخصصي' : 'Al-Nazir Specialist Hospital'}
+                  {language === 'ar' ? 'مستشفى النذير التخصصي' : 'Al-Nazir Specialized Hospital'}
                 </span>
               </div>
               <p className="mb-6 max-w-md leading-relaxed font-medium">
