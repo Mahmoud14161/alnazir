@@ -68,7 +68,7 @@ export default function Layout() {
             
             {/* Logo */}
             <Link to="/" className="flex items-center cursor-pointer shrink-0">
-              <img src="/logo.png" alt="Logo" className={`w-14 h-14 md:w-24 md:h-24 object-contain scale-110 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+              <img src="/logo.png" alt="Logo" className={`w-14 h-14 md:w-24 md:h-24 object-contain scale-125 ${language === 'ar' ? '-ml-2 md:-ml-5 -mr-1 md:-mr-4' : '-mr-2 md:-mr-5 -ml-1 md:-ml-4'}`} />
               <div className="flex flex-col justify-center items-start mt-1">
                 <span className="text-base md:text-xl font-black text-gray-900 whitespace-nowrap">
                    {language === 'ar' ? <>مستشفى <span className="text-red-600">النذير</span></> : <><span className="text-red-600">Al-Nazir</span> Hospital</>}
