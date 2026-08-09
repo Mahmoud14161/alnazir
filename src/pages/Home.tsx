@@ -194,7 +194,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-3xl shadow-lg flex flex-col h-[400px] hover:shadow-2xl hover:shadow-red-900/20 transition-shadow duration-300 border border-gray-100/10"
+                className="group relative overflow-hidden rounded-3xl shadow-lg flex flex-col h-[300px] md:h-[400px] hover:shadow-2xl hover:shadow-red-900/20 transition-shadow duration-300 border border-gray-100/10"
               >
                 {/* Background Image & Gradient */}
                 <div className="absolute inset-0">
