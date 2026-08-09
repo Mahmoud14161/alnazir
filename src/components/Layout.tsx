@@ -119,74 +119,74 @@ export default function Layout() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu Drawer */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="fixed inset-0 bg-gray-900/60 z-[60] lg:hidden backdrop-blur-sm"
-              />
-              
-              {/* Drawer */}
-              <motion.div 
-                initial={{ x: language === 'ar' ? '100%' : '-100%' }}
-                animate={{ x: 0 }}
-                exit={{ x: language === 'ar' ? '100%' : '-100%' }}
-                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className={`fixed top-0 ${language === 'ar' ? 'right-0' : 'left-0'} h-full w-4/5 max-w-sm bg-white z-[70] lg:hidden shadow-2xl flex flex-col`}
-              >
-                <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                    <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
-                    <div className="flex flex-col">
-                      <span className="text-xl font-black text-gray-900 leading-none mb-1">
-                        {language === 'ar' ? <>مستشفى <span className="text-red-600">النذير</span></> : <><span className="text-red-600">Al-Nazir</span></>}
-                      </span>
-                    </div>
-                  </div>
-                  <button 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-
-                <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col space-y-2">
-                  <Link to="/" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.home')}</Link>
-                  <Link to="/services/clinics" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.clinics')}</Link>
-                  <Link to="/services/operations" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.operations')}</Link>
-                  <Link to="/services/radiology" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.radiology')}</Link>
-                  <Link to="/services/icu" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.icu')}</Link>
-                  <Link to="/services/incubators" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.incubators')}</Link>
-                  <Link to="/services/lab" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.lab')}</Link>
-                  <Link to="/services/daycare" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.daycare')}</Link>
-                  <Link to="/gallery" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.gallery')}</Link>
-                </div>
-                
-                <div className="p-6 border-t border-gray-100 bg-gray-50">
-                  <button 
-                    onClick={() => {
-                      setIsBookingModalOpen(true);
-                      setIsMobileMenuOpen(false);
-                    }} 
-                    className="w-full px-6 py-4 font-bold text-white bg-[#A3924A] rounded-xl hover:bg-[#8D7F41] transition-colors shadow-lg shadow-[#A3924A]/20 flex items-center justify-center gap-2"
-                  >
-                    <CalendarCheck className="w-5 h-5" />
-                    {t('nav.book')}
-                  </button>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </nav>
+
+      {/* Mobile Menu Drawer */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-gray-900/60 z-[60] lg:hidden backdrop-blur-sm"
+            />
+            
+            {/* Drawer */}
+            <motion.div 
+              initial={{ x: language === 'ar' ? '100%' : '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: language === 'ar' ? '100%' : '-100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className={`fixed top-0 ${language === 'ar' ? 'right-0' : 'left-0'} h-full w-4/5 max-w-sm bg-white z-[70] lg:hidden shadow-2xl flex flex-col`}
+            >
+              <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                  <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+                  <div className="flex flex-col">
+                    <span className="text-xl font-black text-gray-900 leading-none mb-1">
+                      {language === 'ar' ? <>مستشفى <span className="text-red-600">النذير</span></> : <><span className="text-red-600">Al-Nazir</span></>}
+                    </span>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col space-y-2">
+                <Link to="/" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.home')}</Link>
+                <Link to="/services/clinics" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.clinics')}</Link>
+                <Link to="/services/operations" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.operations')}</Link>
+                <Link to="/services/radiology" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.radiology')}</Link>
+                <Link to="/services/icu" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.icu')}</Link>
+                <Link to="/services/incubators" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.incubators')}</Link>
+                <Link to="/services/lab" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.lab')}</Link>
+                <Link to="/services/daycare" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.daycare')}</Link>
+                <Link to="/gallery" className={`text-${language === 'ar' ? 'right' : 'left'} text-gray-800 font-bold py-3 px-4 hover:bg-gray-50 rounded-lg transition-colors`}>{t('nav.gallery')}</Link>
+              </div>
+              
+              <div className="p-6 border-t border-gray-100 bg-gray-50">
+                <button 
+                  onClick={() => {
+                    setIsBookingModalOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }} 
+                  className="w-full px-6 py-4 font-bold text-white bg-[#A3924A] rounded-xl hover:bg-[#8D7F41] transition-colors shadow-lg shadow-[#A3924A]/20 flex items-center justify-center gap-2"
+                >
+                  <CalendarCheck className="w-5 h-5" />
+                  {t('nav.book')}
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Main Content Area */}
       <main className="flex-1">
