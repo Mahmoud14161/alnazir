@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       {/* Professional Hero Section */}
-      <section className="relative bg-gray-900 text-white overflow-hidden">
+      <section className="relative bg-gray-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0 bg-gray-900">
           <video 
             ref={videoRef}
@@ -50,7 +50,7 @@ export default function Home() {
           />
           <div className={`absolute inset-0 bg-gradient-to-${language === 'ar' ? 'l' : 'r'} from-gray-900/90 via-gray-900/70 to-transparent`}></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-32">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,23 +61,23 @@ export default function Home() {
               <ShieldCheck className="w-6 h-6 text-red-500" />
               <span className="text-red-400 font-bold tracking-wide">{t('home.heroTitle1')}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-[1.2] mb-6 text-white">
               {language === 'ar' ? <>مستشفى <span className="text-red-500">النذير</span> التخصصي</> : <><span className="text-red-500">Al-Nazir</span> Specialist Hospital</>}
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl font-medium">
               {t('home.heroDesc')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button 
                 onClick={openBooking}
-                className="px-8 py-4 bg-[#A3924A] text-white rounded-lg font-bold text-lg hover:bg-[#8D7F41] shadow-lg shadow-[#A3924A]/30 transition-all flex items-center justify-center gap-2"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-[#A3924A] text-white rounded-lg font-bold text-base sm:text-lg hover:bg-[#8D7F41] shadow-lg shadow-[#A3924A]/30 transition-all flex items-center justify-center gap-2"
               >
                 <CalendarCheck className="w-5 h-5" />
                 {t('home.bookNow')}
               </button>
               <Link 
                 to="/services/clinics"
-                className="px-8 py-4 bg-white/10 text-white backdrop-blur-sm border border-white/20 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-white/10 text-white backdrop-blur-sm border border-white/20 rounded-lg font-bold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center"
               >
                 {t('home.viewServices')}
               </Link>
