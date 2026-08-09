@@ -1,0 +1,6 @@
+{
+  "name": "مستشفى النذير التخصصي",
+  "description": "موقع تعريفي لمستشفى النذير التخصصي يعرض الخدمات الطبية والأقسام المتاحة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
