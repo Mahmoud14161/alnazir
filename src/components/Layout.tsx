@@ -262,7 +262,7 @@ export default function Layout() {
       {/* Phone Call Floating Button */}
       <a 
         href="tel:0224230003" 
-        className={`fixed bottom-[4.5rem] md:bottom-28 ${language === 'ar' ? 'left-4 md:left-6' : 'right-4 md:right-6'} z-50 bg-[#A3924A] text-white p-3 md:p-4 rounded-full shadow-lg shadow-[#A3924A]/40 hover:scale-110 transition-transform flex items-center justify-center hover:shadow-xl hover:shadow-[#A3924A]/50 w-12 h-12 md:w-16 md:h-16`}
+        className="fixed bottom-4 md:bottom-6 left-4 md:left-6 z-50 bg-[#A3924A] text-white p-3 md:p-4 rounded-full shadow-lg shadow-[#A3924A]/40 hover:scale-110 transition-transform flex items-center justify-center hover:shadow-xl hover:shadow-[#A3924A]/50 w-12 h-12 md:w-16 md:h-16"
         aria-label="اتصل بنا"
       >
         <Phone className="w-6 h-6 md:w-8 md:h-8 fill-current" />
@@ -273,7 +273,7 @@ export default function Layout() {
         href="https://wa.me/201118880954" 
         target="_blank" 
         rel="noopener noreferrer"
-        className={`fixed bottom-4 md:bottom-6 ${language === 'ar' ? 'left-4 md:left-6' : 'right-4 md:right-6'} z-50 bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-[0_4px_12px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform flex items-center justify-center hover:shadow-[0_6px_16px_rgba(37,211,102,0.5)] w-12 h-12 md:w-16 md:h-16`}
+        className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-[0_4px_12px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform flex items-center justify-center hover:shadow-[0_6px_16px_rgba(37,211,102,0.5)] w-12 h-12 md:w-16 md:h-16"
         aria-label="تواصل معنا عبر واتساب"
       >
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 md:w-8 md:h-8">

@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       {/* Professional Hero Section */}
-      <section className="relative bg-gray-900 text-white overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative bg-gray-900 text-white overflow-hidden min-h-[60vh] lg:min-h-[75vh] flex items-center">
         <div className="absolute inset-0 bg-gray-900">
           <video 
             ref={videoRef}
