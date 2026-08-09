@@ -199,9 +199,9 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="Logo" className={`w-12 h-12 object-contain ${language === 'ar' ? 'ml-3' : 'mr-3'}`} />
-                <span className="text-2xl font-black text-white">
-                  {language === 'ar' ? 'مستشفى النذير' : 'Al-Nazir Hospital'}
+                <img src="/logo.png" alt="Logo" className={`w-16 h-16 md:w-20 md:h-20 object-contain scale-125 ${language === 'ar' ? 'ml-1 md:ml-2' : 'mr-1 md:mr-2'}`} />
+                <span className="text-lg md:text-xl font-black text-white">
+                  {language === 'ar' ? 'مستشفى النذير التخصصي' : 'Al-Nazir Specialist Hospital'}
                 </span>
               </div>
               <p className="mb-6 max-w-md leading-relaxed font-medium">
