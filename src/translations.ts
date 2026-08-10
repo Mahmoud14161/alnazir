@@ -18,7 +18,7 @@ export const translations: Record<string, any> = {
       aboutText: "مستشفى النذير التخصصي يقدم رعاية صحية متكاملة بأحدث الأجهزة الطبية ونخبة من أفضل الأطباء لضمان راحتكم وسلامتكم.",
       quickLinks: "روابط سريعة",
       contact: "تواصل معنا",
-      rights: "جميع الحقوق محفوظة © 2024 مستشفى النذير التخصصي."
+      rights: "جميع الحقوق محفوظة © 2026 مستشفى النذير التخصصي."
     },
     home: {
       heroTitle1: "رعاية صحية متميزة",
@@ -109,7 +109,7 @@ export const translations: Record<string, any> = {
       aboutText: "Al-Nazir Specialist Hospital provides integrated healthcare with the latest medical equipment and top doctors for your comfort and safety.",
       quickLinks: "Quick Links",
       contact: "Contact Us",
-      rights: "All rights reserved © 2024 Al-Nazir Specialist Hospital."
+      rights: "All rights reserved © 2026 Al-Nazir Specialized Hospital."
     },
     home: {
       heroTitle1: "Excellent Healthcare",

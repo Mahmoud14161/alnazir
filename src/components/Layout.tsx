@@ -250,8 +250,14 @@ export default function Layout() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-medium">
-            <p>{t('footer.rights')}</p>
+          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium">
+            <p className="text-center md:text-left">{t('footer.rights')}</p>
+            <p className="text-center md:text-right">
+              {language === 'ar' ? 'تصميم الموقع بواسطة ' : 'Website designed by '}
+              <a href="https://medestra.me/" target="_blank" rel="noopener noreferrer" className="text-red-500 font-bold hover:text-red-400 transition-colors">
+                Medestra ®
+              </a>
+            </p>
           </div>
         </div>
       </footer>
