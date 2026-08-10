@@ -46,6 +46,8 @@ export default function Home() {
             onEnded={handleEnded}
             muted 
             playsInline
+            autoPlay
+            preload="metadata"
             className="w-full h-full object-cover opacity-50 object-center transition-opacity duration-1000 scale-125 md:scale-150 transform-gpu"
           />
           <div className={`absolute inset-0 bg-gradient-to-${language === 'ar' ? 'l' : 'r'} from-gray-900/90 via-gray-900/70 to-transparent`}></div>
@@ -164,8 +166,8 @@ export default function Home() {
             
             <div className="lg:w-1/2 w-full">
                <div className="grid grid-cols-2 gap-4">
-                  <img src="/photos/معرض/Screenshot 2026-08-09 150700.png" alt="Clinic Interior" className="rounded-2xl h-64 w-full object-cover shadow-lg" />
-                  <img src="/photos/معرض/Screenshot 2026-08-09 150736.png" alt="Doctor Consultation" className="rounded-2xl h-64 w-full object-cover mt-12 shadow-lg" />
+                  <img src="/photos/معرض/Screenshot 2026-08-09 150700.png" alt="Clinic Interior" loading="lazy" decoding="async" className="rounded-2xl h-64 w-full object-cover shadow-lg" />
+                  <img src="/photos/معرض/Screenshot 2026-08-09 150736.png" alt="Doctor Consultation" loading="lazy" decoding="async" className="rounded-2xl h-64 w-full object-cover mt-12 shadow-lg" />
                </div>
             </div>
           </div>
@@ -198,7 +200,7 @@ export default function Home() {
               >
                 {/* Background Image & Gradient */}
                 <div className="absolute inset-0">
-                  <img src={dept.image} alt={dept.title[language as keyof typeof dept.title]} className="w-full h-full object-cover transform-gpu will-change-transform group-hover:scale-110 transition-transform duration-500 ease-out" />
+                  <img src={dept.image} alt={dept.title[language as keyof typeof dept.title]} loading="lazy" decoding="async" className="w-full h-full object-cover transform-gpu will-change-transform group-hover:scale-110 transition-transform duration-500 ease-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-gray-900/20 opacity-90 group-hover:opacity-80 transition-opacity duration-300"></div>
                 </div>
 
