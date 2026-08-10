@@ -48,6 +48,7 @@ export default function Home() {
             playsInline
             autoPlay
             preload="metadata"
+            poster="/logo.png"
             className="w-full h-full object-cover opacity-50 object-center transition-opacity duration-1000 scale-125 md:scale-150 transform-gpu"
           />
           <div className={`absolute inset-0 bg-gradient-to-${language === 'ar' ? 'l' : 'r'} from-gray-900/90 via-gray-900/70 to-transparent`}></div>
